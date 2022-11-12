@@ -1,1 +1,45 @@
-<h1>New Data</h1>
+<nav class="navbar navbar-dark bg-dark">
+  <span class="navbar-brand mb-0 h1 ">Ingreso de datos</span>
+</nav>
+
+
+
+<div class="content center-div">
+  <form>
+    <div class="form-group">
+      <label class="sr-only" for="montoInput">Monto (en colones)</label>
+      <div class="input-group">
+        <div class="input-group-addon colon-input">₡</div>
+        <input type="number" min="00" step="1000" value="0000" id="montoInput" class="form-control" placeholder="0000">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="DescripcionInput">Descripción</label>
+      <input type="text" class="form-control" id="DescripcionInput" >
+    </div>
+    <div class="form-group">
+      <label for="ResponsableInput">Responsable</label>
+      <input type="text" class="form-control" id="ResponsableInput" placeholder="Juan Perez">
+    </div>
+    <div class="form-group">
+      <label for="DepartmentInput">Example select</label>
+      <select class="form-control" id="DepartmentInput">
+        <option>Financiero</option>
+        <option>IT</option>
+        <option>Recursos humanos</option>
+        <option>Contable</option>
+        <option>Legal</option>
+      </select>
+    </div>
+  </form>
+  <div class="report-div">
+    <button type="button" class="btn btn-primary report-btn">Reportar</button>
+  </div>
+
+</div>
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+.navbar-brand
+{
+    font-size: 40px !important;
+    padding-left:1%;
+}
+
+
+
+.center-div{
+    padding-top: 2%;
+    margin: 0 auto;
+    width:90%; /* value of your choice which suits your alignment */
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 0 auto !important; 
+    height: 100%;
+}
+
+
+.footer {
+    flex-shrink: 0;
+  }
+
+html, body {
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1rem;
+}
+
+.colon-input{
+    padding-right: 1%;
+    font-size: 25px;
+}
+
+.report-btn{
+    max-width: 20%;
+}
+
+.report-div{
+    padding-top: 2%;
+}
