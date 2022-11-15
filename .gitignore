@@ -1,0 +1,16 @@
+
+Flask/env/*
+
+Flask/env/lib/python3.9/site-packages/aiohttp/.hash/
+
+Flask/env/lib/python3.9/site-packages/aiohttp/__pycache__/
+
+Flask/env/lib/python3.9/site-packages/aiohttp/
+
+Flask/env/lib/python3.9/site-packages/aiosignal-1.3.1.dist-info/
+
+Flask/env/lib/python3.9/site-packages/aiosignal/
+
+Flask/env/lib/python3.9/site-packages/async_timeout-4.0.2.dist-info/
+
+Flask/Flask.tar
