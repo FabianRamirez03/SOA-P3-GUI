@@ -1,13 +1,38 @@
 <nav class="navbar navbar-dark bg-dark">
-    <span class="navbar-brand mb-0 h1 ">Datos Almacenados</span>
-  </nav>
+    <span class="navbar-brand mb-0 h1" style="margin-left: 1%">Datos Almacenados</span>
+</nav>
   
   
   
-  <div class="content center-div">
+  <div class="content center-div" style="margin-left: 1%">
+
     <form>
+      <div class="form-group">
+        <label for="YearInput">Selecciona un año</label>
+        <select class="form-control" style="width: 20%" id="YearInput" (change)="dateUpdated()">
+          <option *ngFor="let year of this.reportedYears">{{year.fecha}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="MonthInput">Selecciona un mes</label>
+        <select class="form-control" style="width: 20%" id="MonthInput" (change)="dateUpdated()">
+          <option value="1">Enero</option>
+          <option value="2">Febrero</option>
+          <option value="3">Marzo</option>
+          <option value="4">Abril</option>
+          <option value="5">Mayo</option>
+          <option value="6">Junio</option>
+          <option value="7">Julio</option>
+          <option value="8">Agosto</option>
+          <option value="9">Septiembre</option>
+          <option value="10">Octubre</option>
+          <option value="11">Noviembre</option>
+          <option value="12">Diciembre</option>
+        </select>
+      </div>
+
         <div class="form-group">
-            <h3 class="card-title">Monto total del mes: 230000</h3>
+            <h3 class="card-title">Monto total del mes: ₡ {{totalMes}}</h3>
         </div>
         <div class="form-group">
 
@@ -22,20 +47,10 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>PCM</td>
-                <td>50000</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>SFD</td>
-                <td>20000</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>TFM</td>
-                <td>1000</td>
+              <tr *ngFor="let row of this.topExpenser; let i = index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{row.Departamento}}</td>
+                <td>₡ {{row.monto}}</td>
               </tr>
             </tbody>
           </table>
