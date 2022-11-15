@@ -63,25 +63,19 @@
             <thead class="thead-dark">
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Gasto</th>
+                <th scope="col">Departamento</th>
+                <th scope="col">Descripción</th>
                 <th scope="col">Monto</th>
+                <th scope="col">Responsable</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>PCM</td>
-                <td>50000</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>SFD</td>
-                <td>20000</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>TFM</td>
-                <td>1000</td>
+              <tr *ngFor="let row of gastosMes; let i = index">
+                <th scope="row">{{i + 1}}</th>
+                <td>{{row.departamentos}}</td>
+                <td>{{row.descripcion}}</td>
+                <td>₡ {{row.monto}}</td>
+                <td>{{row.responsable}}</td>
               </tr>
             </tbody>
           </table>

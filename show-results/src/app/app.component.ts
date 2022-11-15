@@ -18,18 +18,22 @@ export class AppComponent {
 
   reportedYears: any;
 
+  gastosMes: any;
+
 
 
   constructor(private httpService: HttpServiceService) { }
 
   ngOnInit(): void {
-    this.httpService.getGastos().subscribe((res:any) => {this.topExpenser = res; console.log(res)});
-    this.httpService.getReportedYears().subscribe((res:any) => {this.reportedYears = res; console.log(res)});
+    this.httpService.getGastos().subscribe((res:any) => {this.topExpenser = res});
+    this.httpService.getReportedYears().subscribe((res:any) => {this.reportedYears = res});
 
     this.monthSelected = (document.getElementById('MonthInput') as HTMLInputElement).value;
     this.yearSelected = (document.getElementById('YearInput') as HTMLInputElement).value;
 
     this.httpService.totalMes(this.monthSelected, this.yearSelected).subscribe((res:any) => {this.totalMes = res[0]});
+
+    this.httpService.gastosMes(this.monthSelected, this.yearSelected).subscribe((res:any) => {this.gastosMes = res});
   }
 
   dateUpdated(): void{
@@ -44,7 +48,12 @@ export class AppComponent {
         this.totalMes = "0";
       }
   });
+
+  this.httpService.gastosMes(this.monthSelected, this.yearSelected).subscribe((res:any) => {this.gastosMes = res; console.log(res)}); 
 }
+
+
+
 
   updateInstance(): void{
     this.httpService.getReportedYears().subscribe((res:any) => {this.reportedYears = res; console.log(res)});

@@ -22,4 +22,8 @@ export class HttpServiceService {
   public totalMes(mes: string, año: string){
     return this.http.get(`${this.url}/totalMes?mes=`+mes+'&anio='+año);
   }
+
+  public gastosMes(mes: string, año: string){
+    return this.http.get(`${this.url}/gastosMes?mes=`+mes+'&anio='+año);
+  }
 }
